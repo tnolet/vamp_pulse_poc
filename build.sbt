@@ -14,6 +14,8 @@ resolvers += "Apache repo" at "https://repository.apache.org/content/repositorie
 
 resolvers += "Typesafe repository" at "http://repo. typesafe.com/typesafe/releases/"
 
+scalacOptions ++= Seq("-feature")
+
 libraryDependencies ++= {
   Seq(
     "com.sclasen" %% "akka-kafka" % "0.0.7",

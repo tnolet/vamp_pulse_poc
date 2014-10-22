@@ -36,7 +36,7 @@ class MetricsDBActor extends Actor with ActorLogging {
 
           if (counter % 1000 == 0 ) {
             val interval = System.currentTimeMillis() - timer
-            Logger.info(s"Submitted 1000 metrics to KairosDB in $timer milliseconds ")
+            Logger.info(s"Submitted 1000 metrics to KairosDB in $interval milliseconds ")
             counter = 0
             timer = System.currentTimeMillis()
           }

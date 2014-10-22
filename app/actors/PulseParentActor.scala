@@ -36,9 +36,9 @@ class PulseParentActor extends Actor with ActorLogging {
       val lbMetricsFeed = context.actorOf(Props[LoadBalancerTopicActor], "lbMetricsFeed")
 
       val lbMetricsFeedCommitConfig = CommitConfig(
-        commitInterval = Some(10 seconds),
+        commitInterval = Some(10.seconds),
         commitAfterMsgCount = Some(60),
-        commitTimeout = 5 seconds
+        commitTimeout = 5.seconds
       )
 
       val consumerProps = AkkaConsumerProps.forContext(

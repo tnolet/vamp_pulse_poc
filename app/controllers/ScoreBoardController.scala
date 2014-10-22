@@ -19,7 +19,7 @@ object ScoreBoardController extends Controller {
 
   def list = Action.async {
 
-    implicit val timeout = akka.util.Timeout(5 seconds)
+    implicit val timeout = akka.util.Timeout(5.seconds)
 
     //implicit val mapWrites = Json.writes[scala.collection.mutable.Map[String,Long]]
 
