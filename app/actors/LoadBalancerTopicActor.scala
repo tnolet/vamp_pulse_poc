@@ -28,14 +28,8 @@ class LoadBalancerTopicActor extends Actor with ActorLogging {
         valid = {
           datapoint => {
 
-
-            //filter out all data from dummy and test services, only allow object starting with "vrn-"
-
-            if ( datapoint.name.startsWith("vrn-") && !datapoint.name.contains("dummy")) {
-
               scoreBoard ! datapoint
               metricsDbFeeder ! datapoint
-            }
           }
         },
         invalid = {

@@ -1,10 +1,8 @@
-name := "vamp_pulse"
+name := "vamp-pulse"
 
-version := "0.1"
+version := "1.1"
 
-name := """vamp pulse"""
-
-version := "1.0-SNAPSHOT"
+version := "1.1-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
